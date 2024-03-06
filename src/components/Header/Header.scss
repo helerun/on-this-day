@@ -1,0 +1,27 @@
+.subtitle {
+  font-size: 3rem;
+  color: #fc1758;
+}
+h2 {
+  margin: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 3rem;
+  }
+  .subtilte {
+    margin: 0;
+  }
+}
