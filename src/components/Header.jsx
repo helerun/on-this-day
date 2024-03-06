@@ -21,8 +21,11 @@ const Header = () => {
     ];
     const monthName = month[date.getMonth()];
     const dayNumber = date.getDate(); // Ottenere il numero del giorno
-
-    return `${monthName}, ${dayNumber}`;
+    if (dayNumber < 10) {
+      return `${monthName} 0${dayNumber}`;
+    } else {
+      return `${monthName} ${dayNumber}`;
+    }
   };
 
   // Imposta il sottotitolo in base al giorno corrente
@@ -30,7 +33,10 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1>What happened on this day?</h1>
+      <h1 className="title">
+        What happened
+        <br /> on this day?
+      </h1>
       <h2 className="subtitle">{subtitle}</h2>
     </header>
   );
