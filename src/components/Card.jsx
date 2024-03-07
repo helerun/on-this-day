@@ -4,28 +4,28 @@ import "./Card.scss";
 function Card(props) {
   function openClose() {
     //apre e chiude la card
+    // DA FARE !!!!!!!!!
     if (props.isOpen === true) {
       //aprimi la card
     }
   }
-
   return (
     <div className="container" onClick={openClose}>
       <div className="cardTop">
-        <span className="cardEvent">Luogo</span>
-        <span className="cardYear">2000</span>
+        <span className="cardEvent">{props.place}</span>
+        <span className="cardYear">{props.year}</span>
       </div>
       <div className="cardDescription">
         <div className="cardLeft">
-          <img
-            src="https://media.istockphoto.com/id/1147544807/it/vettoriale/la-commissione-per-la-immagine-di-anteprima-grafica-vettoriale.jpg?s=612x612&w=0&k=20&c=gsxHNYV71DzPuhyg-btvo-QhhTwWY0z4SGCSe44rvg4="
-            className="cardImg"
-          />
+        <img
+          src={props.img}
+          className="cardImg"
+          //qui gli sto dicendo che se l'immagine non c'è di nascondere il tag img
+          style={{ display: props.img === undefined ? 'none' : 'block' }}
+        />
         </div>
         <div className="cardRight">
-          <p className="cardText">
-            Bradman plays his last innings in 1st-class cricket, gets 30!
-          </p>
+          <p className="cardText">{props.text}</p>
         </div>
       </div>
     </div>
