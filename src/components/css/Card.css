@@ -1,0 +1,44 @@
+.container {
+  margin: 15px;
+  background-color: #3257ff;
+  padding: 12px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.cardEvent,
+.cardYear {
+  font-size: 12px;
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cardImg {
+  width: 80px;
+}
+
+.cardText {
+  font-size: 16px;
+  text-align: left;
+  color: white;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 360px) {
+  .subtitle {
+    font-size: 3rem;
+    margin: 0;
+  }
+}/*# sourceMappingURL=Card.css.map */
