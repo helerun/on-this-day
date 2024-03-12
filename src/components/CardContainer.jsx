@@ -38,7 +38,16 @@ function CardContainer() {
             .get(url)
             .then(function (response) {
                 //buttiamo l'oggettone events dentro a wiki utilizzando setWiki
-                setWiki(response.data.events);
+                const randomWiki = []
+                for (let i = 0; i < 5; i++) {
+                    //creiamo il nostro numero random da 0 alla lunghezza di wiki
+                    const randomIndex = Math.floor(Math.random() * response.data.events.length);
+                    //qui controlliamo che non ci siano doppioni
+                    if (!randomWiki.includes(randomIndex)) {
+                        randomWiki.push(response.data.events[randomIndex]);
+                    }
+                }
+                setWiki(randomWiki);
                 setLoading(false);
             })
             .catch(function (error) {
@@ -52,54 +61,22 @@ function CardContainer() {
     function openCard(i) {
         setCardOpen(cardOpen === i ? null : i);
     }
-
-    //questa funzione ci serve per poter mostrare i dati in base alla variabile loading
     function RenderCards(props) {
         if (props.loading) {
-            return <div>Loading...</div>;
+            return <div> Loading...</div>;
         } else {
-            //array vuoto dove ci metteremo 5 valori randomici per recuperare 5 eventi a caso dallo stato wiki
-            const random = [];
-
-            while (random.length < 5) {
-                //creiamo il nostro numero random da 0 alla lunghezza di wiki
-                const randomIndex = Math.floor(Math.random() * wiki.length);
-                //qui controlliamo che non ci siano doppioni
-                if (!random.includes(randomIndex)) {
-                    random.push(randomIndex);
-                }
-            }
-
-            //con questo facciamo in modo che per ogni elemento dell'array random gli generiamo
-            //il suo componente card che si prende come indice il numero randomico
-            //i sta per la corrente iterazione
-            //index è il valore del numero randomico
-            //il punto di domanda inserito (wiki[index]?) è per controllare che il valore che stiamo accedendo non sia undefined e se lo è
-            //non esce un errore ma ce lo gestiamo altrove (Vedi componente Card.jsx)
+            
             return (
                 <div className="cardContainer">
                     {wiki.map((w, i) => (
                         <Card
                             onClick={() => openCard(i)}
                             key={i}
-                            //aggiunto  un controllo per vedere se l'indice corrente è uguale a cardOpen
-                            open={cardOpen === i
-                            
-                            
-                            }
-                            //aggiunto un controllo per vedere se l'indice corrente è uguale a cardOpen
-                            text={
-                               w?.text
-                            }
-                            // aggiunto extract 
+                            open={cardOpen === i}
+                            text={w?.text}
                             extract={w?.pages[0]?.extract}
                             year={w?.year}
-                            img={
-                                cardOpen === i
-                                    ? null
-                                    : w?.pages[0]?.thumbnail?.source
-                                
-                            }
+                            img={w?.pages[0]?.thumbnail?.source}
                             links={w?.pages[0]?.content_urls?.mobile?.page}
                         />
                     ))}
