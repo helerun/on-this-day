@@ -14,13 +14,13 @@
   margin-bottom: 15px;
 }
 
-.cardBottom{
+.cardBottom {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  align-items: center ;
+  align-items: center;
   margin-top: 15px;
-  text-align: center  ;
+  text-align: center;
   background-color: #eaf648;
   padding: 5px;
   border-radius: 8px;
@@ -29,16 +29,15 @@
   cursor: pointer;
 }
 
-
 a {
-  text-decoration: none;  
+  text-decoration: none;
   color: black;
 }
 
-.arrowButton{
+.arrowButton {
   font-size: 20px;
   color: #000;
-  font-weight: bold ;
+  font-weight: bold;
 }
 
 .cardEvent,
