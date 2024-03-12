@@ -14,6 +14,33 @@
   margin-bottom: 15px;
 }
 
+.cardBottom{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center ;
+  margin-top: 15px;
+  text-align: center  ;
+  background-color: #eaf648;
+  padding: 5px;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+a {
+  text-decoration: none;  
+  color: black;
+}
+
+.arrowButton{
+  font-size: 20px;
+  color: #000;
+  font-weight: bold ;
+}
+
 .cardEvent,
 .cardYear {
   font-size: 12px;
@@ -27,6 +54,10 @@
 
 .cardImg {
   width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
 }
 
 .cardText {
@@ -41,10 +72,4 @@
     font-size: 3rem;
     margin: 0;
   }
-}
-
-.cardImg {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
 }

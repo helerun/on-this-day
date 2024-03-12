@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Favorit Pro";
+    src: url("./fonts/FavoritPro-Regular.otf") format("opentype"),
+      url("./fonts/FavoritPro-Bold.otf") format("opentype"),
+      url("./fonts/GT-Flexa-Mono-Regular-Trial.otf") format("opentype");
+  }
+  
+
 body {
   padding: 0;
   box-sizing: border-box;
