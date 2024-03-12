@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.scss"; // Assicurati di avere questo file SCSS
+import "./Header.css"; // Assicurati di avere questo file SCSS
 
 const Header = () => {
   // Funzione per ottenere il giorno corrente come stringa

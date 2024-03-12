@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./Card.scss";
+import "./Card.css";
 
 function Card(props) {
   function openClose() {
@@ -17,12 +16,12 @@ function Card(props) {
       </div>
       <div className="cardDescription">
         <div className="cardLeft">
-        <img
-          src={props.img}
-          className="cardImg"
-          //qui gli sto dicendo che se l'immagine non c'è di nascondere il tag img
-          style={{ display: props.img === undefined ? 'none' : 'block' }}
-        />
+          <img
+            src={props.img}
+            className="cardImg"
+            //qui gli sto dicendo che se l'immagine non c'è di nascondere il tag img
+            style={{ display: props.img === undefined ? "none" : "block" }}
+          />
         </div>
         <div className="cardRight">
           <p className="cardText">{props.text}</p>
