@@ -33,15 +33,21 @@ function CardContainer({ date }) {
       .then((response) => {
         // Scegli eventi casuali
         const randomWiki = [];
+        let randomIndex = [];
+        let eventsLength = response.data.events.length;
+
         for (let i = 0; i < 5; i++) {
-          const randomIndex = Math.floor(
-            Math.random() * response.data.events.length
-          );
-          const event = response.data.events[randomIndex];
-          if (!randomWiki.includes(event)) {
-            randomWiki.push(event);
-          }
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * eventsLength);
+            } while (randomIndex.includes(newIndex)); // Check if the index already exists
+            randomIndex.push(newIndex);
         }
+
+        randomIndex.forEach( i => {
+            const event = response.data.events[i];
+            randomWiki.push(event);
+        })
         setWiki(randomWiki);
         setLoading(false);
       })

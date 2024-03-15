@@ -1,4 +1,5 @@
 import "./Card.css";
+import Immagine from "../image/memory_eye-fill.png";
 
 function Card(props) {
   function RenderText() {
@@ -10,8 +11,7 @@ function Card(props) {
             className="cardBottom"
             style={{
               display: props.links === undefined ? "none" : "flex",
-            }}
-          >
+            }}>
             <a href={props.links} target="_blank">
               Read the full article
             </a>
@@ -27,15 +27,10 @@ function Card(props) {
     if (props.open === false) {
       return (
         <div className="cardLeft">
-          {props.img && (
             <img
-              src={props.img}
+              src={props.img || Immagine}
               className="cardImg"
-              style={{
-                visibility: props.img === undefined ? "hidden" : "flex",
-              }}
             />
-          )}
         </div>
       );
     }
