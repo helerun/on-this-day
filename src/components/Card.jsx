@@ -4,21 +4,22 @@ function Card(props) {
   function RenderText() {
     if (props.open === true) {
       return (
-        <div className="cardRight">
-          <p className="cardText">{props.extract}</p>
-          <a href=""></a>
-          <div
-            className="cardBottom"
-            style={{
-              display: props.links === undefined ? "none" : "flex",
-            }}
-          >
-            <a href={props.links} target="_blank">
-              Read the full article
-            </a>
-            <span className="arrowButton">{"\u2192"}</span>
+          <div className="cardRight">
+              <p className="cardText">{props.extract}</p>
+              <a href={props.links} target="_blank">
+                  <div
+                      className="cardBottom"
+                      style={{
+                          display: props.links === undefined ? "none" : "flex"
+                      }}
+                  >
+                      <a href={props.links} target="_blank">
+                          Read the full article
+                      </a>
+                      <span className="arrowButton">{"\u2192"}</span>
+                  </div>
+              </a>
           </div>
-        </div>
       );
     } else {
       return <p className="cardText">{props.text}</p>;
