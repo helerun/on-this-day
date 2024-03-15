@@ -30,6 +30,7 @@ function Card(props) {
             <img
               src={props.img || Immagine}
               className="cardImg"
+              style = {{backgroundColor: "#ffffff"}}
             />
         </div>
       );
