@@ -6,6 +6,7 @@ function Card(props) {
       return (
         <div className="cardRight">
           <p className="cardText">{props.extract}</p>
+          <a href=""></a>
           <div
             className="cardBottom"
             style={{
