@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 import Immagine from "../image/memory_eye-fill.png";
 
-function Form() {
+function Form({ onDateChange }) {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
 
@@ -30,16 +30,15 @@ function Form() {
     const monthValue = event.target.value;
     setMonth(monthValue);
     const maxDays = getMaxDaysInMonth(monthValue);
-    if (day > maxDays) {
-      setDay("");
+    if (parseInt(day) > maxDays) {
+      setDay(""); // Assicurati di confrontare come numeri
     }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (day !== "" && month !== "") {
-      console.log("Giorno selezionato:", day);
-      console.log("Mese selezionato:", month);
+      onDateChange(day, month);
     } else {
       console.log("Data non valida");
     }
