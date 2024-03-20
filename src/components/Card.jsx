@@ -25,12 +25,12 @@ function Card(props) {
   }
   function RenderImg() {
     if (props.open === false) {
-      return (
+        return (
         <div className="cardLeft">
             <img
               src={props.img || Immagine}
-              className="cardImg"
-              style = {{backgroundColor: "#ffffff"}}
+              className={`cardImg ${props.img ? '' : 'immagineClass'}`}
+              style = {{backgroundColor: "#f5f5ff"}}
             />
         </div>
       );
