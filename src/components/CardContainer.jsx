@@ -9,6 +9,7 @@ function CardContainer({ date }) {
 
   useEffect(() => {
     // Determina giorno e mese
+
     let day = date.day;
     let month = date.month;
 
