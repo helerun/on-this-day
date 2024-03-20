@@ -19,7 +19,7 @@ img {
 }
 
 input {
-  font-family: "Consolas";
+  font-family: "Consolas", "Arial";
   font-weight: 400;
   text-align: center;
   background: #d9d9d9;
@@ -30,7 +30,7 @@ input {
   color: #8b8b8b;
 }
 select {
-  font-family: "Consolas";
+  font-family: "Consolas", "Arial";
   font-weight: 400;
   text-align: center;
   background: #d9d9d9;
