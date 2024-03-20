@@ -16,7 +16,7 @@ function CardContainer({ date }) {
     if (!day || !month) {
       const today = new Date();
       day = today.getDate().toString();
-      month = (today.getMonth() + 1).toString();
+      month = (today.getMonth()).toString();
     }
 
     // Aggiungi zero davanti ai numeri minori di 10
