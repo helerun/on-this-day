@@ -1,8 +1,5 @@
-"On This Day" is a collaborative project developed by:
+This website showcases historical events that occurred on the current date throughout history. 
 
-He Lerun
-Karin Fioritto
-Eros Castagna
-Enrico Malisan. 
+This project, 'On This Day,' was created as part of a web development course undertaken by:
 
-This website showcases historical events that occurred on the current date throughout history. Through meticulous data collection and elegant design, users can explore significant events from the past in an accessible and engaging manner.
+He Lerun, Karin Fioritto, Eros Castagna, and Enrico Malisan.
