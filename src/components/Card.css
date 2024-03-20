@@ -1,79 +1,89 @@
 .container {
-  margin: 15px;
-  background-color: #3257ff;
-  padding: 12px;
-  color: white;
-  margin-bottom: 15px;
+	margin: 15px;
+	background-color: #3257ff;
+	padding: 12px;
+	color: white;
+	margin-bottom: 15px;
 }
 
 .cardTop {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1.5px solid rgb(255, 255, 255);
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1.5px solid rgb(255, 255, 255);
+	padding-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 .cardBottom {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  align-items: center;
-  margin-top: 15px;
-  text-align: center;
-  background-color: #eaf648;
-  padding: 5px;
-  border-radius: 8px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	align-items: center;
+	margin-top: 15px;
+	text-align: center;
+	background-color: #eaf648;
+	padding: 5px;
+	border-radius: 8px;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .arrowButton {
-  font-size: 20px;
-  color: #000;
-  font-weight: bold;
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
 }
 
 .cardEvent,
 .cardYear {
-  font-size: 12px;
+	font-size: 12px;
 }
 
 .cardDescription {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
 }
 
 .cardImg {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  display: grid;
-  place-items: center;
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	display: grid;
+	place-items: center;
 }
 
 .cardText {
-  font-size: 16px;
-  text-align: left;
-  color: white;
-  margin-left: 15px;
+	font-size: 16px;
+	text-align: left;
+	color: white;
+	margin-left: 15px;
+}
+
+.immagineClass {
+	min-width: 40px;
+	min-height: 40px;
+	padding: 20px;
 }
 
 @media screen and (max-width: 360px) {
-  .subtitle {
-    font-size: 3rem;
-    margin: 0;
-  }
+	.subtitle {
+		font-size: 3rem;
+		margin: 0;
+	}
 }
-.immagineClass {
-    min-width: 40px;
-    min-height: 40px;
-    padding: 20px;
-  }
+@media screen and (min-width: 768px) {
+	.container {
+		align-items: center;
+		justify-content: center;
+		max-width: 780px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
