@@ -39,6 +39,7 @@ function Form({ onDateChange }) {
     event.preventDefault();
     if (day !== "" && month !== "") {
       onDateChange(day, month);
+      window.scrollTo(0, 0);
     } else {
       console.log("Data non valida");
     }
